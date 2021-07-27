@@ -10,7 +10,7 @@ console.log("[i] darlin is on port " + port);
 async function runServer(req, res) {
     var url = urlPkg.parse(req.url, true);
     if (url.pathname == "/") {
-        fs.readFile("./web-content/index.html", function (err, resp) { 
+        fs.readFile("./index.html", function (err, resp) { 
             if (!err) {
                 res.writeHead(200, {
                     "Access-Control-Allow-Origin" : "*",
